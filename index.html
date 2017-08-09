@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<body>
+		<label>Play ball!!</label>
+		<br>
+		<br>
+		<center>
+		<canvas id="mycanvas" width ="400" height="300">Canvas Not Supported</canvas>
+		</center>
+	</body>
+
+	<script src="./javascripts/gamelogic.js"></script>
+	<script src="./javascripts/ball.js"></script>
+	<script src="./javascripts/pad.js"></script>
+	<script src="./javascripts/box.js"></script>
+	<script>
+		box.initializeBoxProperties(document.getElementById('mycanvas'), 10);
+
+		document.onmousemove = box.mouseMove;
+		box.canvas.onmouseup = box.startGame;
+
+		document.ontouchmove = box.touchMove;
+		box.canvas.ontouchend = box.startGame;
+	</script>
+</html>
